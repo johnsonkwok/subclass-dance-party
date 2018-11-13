@@ -1,7 +1,9 @@
 var makeBounceDancer = function(top, left, timeBetweenSteps) {
   // call makeDancer function to instantiate an object 
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.append('<img src="assets/ken.gif">').addClass('bounce');
+  const charcs = ['bison', 'chunli', 'feilong', 'ken'];
+  const randIdx = Math.floor(Math.random() * charcs.length);
+  this.$node.append(`<img class="bounce" src="assets/${charcs[randIdx]}.gif" width="150" height="220">`).addClass('bounce');
 };
 
 // set makeBounceDancer prototype and its constructor to the appropriate item

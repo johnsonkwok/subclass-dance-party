@@ -42,6 +42,19 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
 }
 
-.bounce {
+@keyframes bounce {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+} 
 
+.bounce {
+  /* Shorthand method:
+  animation: 2s linear infinite bounce;  */  
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: bounce;
+  animation-timing-function: linear;
 }
+
+   
