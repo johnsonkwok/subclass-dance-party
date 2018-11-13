@@ -2,19 +2,28 @@
 <html>
   <head>
     <title>Object Dance Party</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <script src="lib/jquery.js"></script>
     <script src="src/dancer.js"></script>
     <script src="src/blinkyDancer.js"></script>
-    <script src="src/hackerDancer.js"></script>
-    <script src="src/flexDancer.js"></script>
+    <script src="src/slideDancer.js"></script>
+    <script src="src/bounceDancer.js"></script>
   </head>
   <body>
-    <div class="background">
-      <img src="assets/dancefloor.png">
+    
     <div class="topbar">
       <span class="title">object dance party</span>
-      <a href="#" class="addDancerButton" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>    </div>
+      <a href="#" class="addDancerButton blinky-btn" data-dancer-maker-function-name="makeBlinkyDancer">add a blinky dancer</a>
+      <a href="#" class="addDancerButton bounce-btn" data-dancer-maker-function-name="makeBounceDancer">add a bounce dancer</a>
+      <a href="#" class="addDancerButton slide-btn" data-dancer-maker-function-name="makeSlideDancer">add a slide dancer</a>
+    </div>
+    
+    <div class="background container">
+     
+     
+    </div>
+    
     <script src="src/init.js"></script>
   </body>
 </html>

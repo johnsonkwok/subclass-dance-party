@@ -1,6 +1,7 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   // call makeDancer function to instantiate an object 
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('blinky');
 };
 
 // set makeBlinkyDancer prototype and its constructor to the appropriate item
