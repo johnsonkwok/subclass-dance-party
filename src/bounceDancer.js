@@ -1,8 +1,9 @@
 var makeBounceDancer = function(top, left, timeBetweenSteps) {
   // call makeDancer function to instantiate an object 
   makeDancer.call(this, top, left, timeBetweenSteps);
-  const charcs = ['bison', 'chunli', 'feilong', 'ken'];
+  const charcs = ['bison', 'chunli', 'feilong', 'ken', 'akuma'];
   const randIdx = Math.floor(Math.random() * charcs.length);
+  this.charc = charcs[randIdx];
   this.$node.append(`<img class="bounce" src="assets/${charcs[randIdx]}.gif" width="150" height="220">`);
 };
 

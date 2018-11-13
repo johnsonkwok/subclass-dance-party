@@ -43,3 +43,10 @@ makeDancer.prototype.lineUp = function() {
   this.$node.css(styleSettings);
 }
   
+  makeDancer.prototype.faceOff = function(pad) {
+  var styleSettings = {
+    left: 400 + (pad || 0)
+  };
+  this.$node.css(styleSettings);
+}
+  

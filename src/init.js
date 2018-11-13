@@ -37,5 +37,15 @@ $(document).ready(function() {
     });
   });
 
+  $('.faceoff-btn').on('click', function() {
+    const leftFacing = ['ryu', 'ken', 'chunli'];
+    window.dancers.forEach(function(el) {
+      if (leftFacing.includes(el.charc)) {
+        el.faceOff(700);
+      } else {
+        el.faceOff();
+      }
+    });
+  });
 });
 

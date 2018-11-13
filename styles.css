@@ -31,10 +31,11 @@ body, a:link, a:visited, a:active{
 .title{
   background-color: #777;
 }
-.lineup-btn{
+.lineup-btn, .faceoff-btn{
   padding:5px 12px;
   float:left;
 }
+
 /********* Dancers *********/
 .dancer {
   position: absolute;
@@ -60,6 +61,21 @@ body, a:link, a:visited, a:active{
   animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-name: bounce;
+  animation-timing-function: linear;
+}
+
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  50%  { transform: translateX(70px); }
+  100% { transform: translateX(0); }
+} 
+
+.slide {
+  /* Shorthand method:
+  animation: 2s linear infinite bounce;  */  
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: slide;
   animation-timing-function: linear;
 }
 
