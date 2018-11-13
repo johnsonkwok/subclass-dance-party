@@ -3,14 +3,14 @@ var makeBounceDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   const charcs = ['bison', 'chunli', 'feilong', 'ken'];
   const randIdx = Math.floor(Math.random() * charcs.length);
-  this.$node.append(`<img class="bounce" src="assets/${charcs[randIdx]}.gif" width="150" height="220">`).addClass('bounce');
+  this.$node.append(`<img class="bounce" src="assets/${charcs[randIdx]}.gif" width="150" height="220">`);
 };
 
 // set makeBounceDancer prototype and its constructor to the appropriate item
 makeBounceDancer.prototype = Object.create(makeDancer.prototype);
 makeBounceDancer.prototype.constructor = makeBounceDancer;
 
-makeBounceDancer.prototype.step = function() {
+// makeBounceDancer.prototype.step = function() {
   
-  this.$node.toggle();
-}
+//   this.$node.toggle();
+// }
