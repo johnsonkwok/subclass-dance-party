@@ -10,8 +10,3 @@ var makeBounceDancer = function(top, left, timeBetweenSteps) {
 // set makeBounceDancer prototype and its constructor to the appropriate item
 makeBounceDancer.prototype = Object.create(makeDancer.prototype);
 makeBounceDancer.prototype.constructor = makeBounceDancer;
-
-// makeBounceDancer.prototype.step = function() {
-  
-//   this.$node.toggle();
-// }

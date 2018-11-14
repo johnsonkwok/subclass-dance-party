@@ -30,22 +30,34 @@ $(document).ready(function() {
   });
  
   $('.lineup-btn').on('click', function() {
-    // padding = 0;
-    window.dancers.forEach(function(el) {
-      el.lineUp();
-      // padding += 2;
+    let padding = 0;
+    window.dancers.forEach(function(dancr) {
+      dancr.lineUp(padding);
+      if (padding < $('body').width() - 200) {
+        padding += 80;
+      } else {
+        padding = 0;
+      }
     });
   });
 
   $('.faceoff-btn').on('click', function() {
     const leftFacing = ['ryu', 'ken', 'chunli'];
-    window.dancers.forEach(function(el) {
-      if (leftFacing.includes(el.charc)) {
-        el.faceOff(700);
+    window.dancers.forEach(function(dancr) {
+      if (leftFacing.includes(dancr.charc)) {
+        dancr.faceOff(550);
       } else {
-        el.faceOff();
+        dancr.faceOff();
       }
     });
+    $('.dancer').addClass('rotate');
+    setTimeout(() => $('.dancer').removeClass('rotate'), 3000);
   });
+
+  $('.container2').on('click', '.dancer', function(e) {
+    $(this).empty();
+    $(this).append(`<img class="bounce" src="assets/ken2.gif" width="150" height="220">`);
+  });
+
 });
 

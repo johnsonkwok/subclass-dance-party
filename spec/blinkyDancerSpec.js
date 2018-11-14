@@ -1,11 +1,14 @@
 describe('blinkyDancer', function() {
 
-  var blinkyDancer, clock;
+  var blinkyDancer, dancer, clock, slideDancer, bounceDancer;
   var timeBetweenSteps = 100;
 
   beforeEach(function() {
     clock = sinon.useFakeTimers();
     blinkyDancer = new makeBlinkyDancer(10, 20, timeBetweenSteps);
+    dancer = new makeDancer(10, 20, timeBetweenSteps);
+    slideDancer = new makeSlideDancer(10, 20, timeBetweenSteps);
+    bounceDancer = new makeBounceDancer(10, 20, timeBetweenSteps);
   });
 
   it('should have a jQuery $node object', function() {
@@ -30,5 +33,16 @@ describe('blinkyDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
+    
+    it('should have a lineUp method on each dancer instance', function() {
+      expect(dancer.lineUp).to.exist;
+    });
+
+    it('should have at least two subclasses of the makeDancer function', function() {
+      expect(slideDancer).to.be.an.instanceof(makeDancer);
+      expect(bounceDancer).to.be.an.instanceof(makeDancer);
+    });
+    
   });
+
 });
