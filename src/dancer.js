@@ -14,7 +14,7 @@ var makeDancer = function(top, left, timeBetweenSteps) {
   this.setPosition(top, left);
   
   window.dancers.push(this);
-}
+};
 
 makeDancer.prototype.step = function() {
   // the basic dancer doesn't do anything interesting at all on each step,
@@ -40,12 +40,12 @@ makeDancer.prototype.lineUp = function(pad) {
     left: 10 + (pad || 0)
   };
   this.$node.css(styleSettings);
-}
+};
   
-  makeDancer.prototype.faceOff = function(pad) {
+makeDancer.prototype.faceOff = function(pad) {
   var styleSettings = {
     left: 400 + (pad || 0)
   };
   this.$node.css(styleSettings);
-}
+};
   
